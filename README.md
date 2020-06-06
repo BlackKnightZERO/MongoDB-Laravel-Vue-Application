@@ -1,5 +1,44 @@
 ![mongoLaravelVue](https://user-images.githubusercontent.com/29349064/83777849-b97fcb80-a6ab-11ea-96fa-7994d9ef86f0.jpg)
 
+========================================================
+How To Run :
+--NodeJS
+* install NodeJS
+
+--configuring mongoDB with PHP
+* install mongoDB and mongoDB compass 
+* install php_mongodb driver via -> downloading & the specific .dll file of your php version 
+                                 -> placing the .dll file to xampp/wamp's php/ext directory
+                                 -> then adding driver information in php.ini file
+
+(helper link: https://www.youtube.com/watch?v=oP6_lumWUo8&t=480s )
+
+--DB creation : 
+* open up mongodb compass, make connection, create a new database -> myMongoDB
+
+--Composer : 
+* install composer for autoloading php classes
+
+--main project
+* clone or download the compressed project file(then extract) 
+* make a .env file in the project's root directory and copy the contents of example.env to newly created .env
+* edit the contents of .env file -> DB_CONNECTION=mongodb
+				    DB_HOST=localhost
+                                    DB_PORT=27017
+				    DB_DATABASE=myMongoDB
+				    DB_USERNAME=
+                                    DB_PASSWORD=
+--commands				    
+* on the projects root directory -> open powershell and input command --> composer install (close the window after task is done)
+								      --> npm install      (close the window after task is done)
+								      --> php artisan migrate (check db for successful migration)
+								      --> npm run watch (keep it open) //watcher recompiles your js code after every save so you don't have to build via command every time
+								      --> php artisan serve (keep it open)
+* open browser and hit url -> http://127.0.0.1:8000/
+* project should now be running 
+ 
+========================================================	
+
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
