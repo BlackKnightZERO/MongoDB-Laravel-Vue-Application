@@ -2,12 +2,12 @@
 
 =======================================================
 
-How To Run:
+How To Run?
 
---NodeJS
+--NodeJS :
 * install NodeJS
 
---configuring mongoDB with PHP
+--Configuring mongoDB with PHP :
 * install mongoDB and mongoDB compass 
 * install php_mongodb driver via -> downloading & the specific .dll file of your php version 
                                  -> placing the .dll file to xampp/wamp's php/ext directory
@@ -21,7 +21,7 @@ How To Run:
 --Composer : 
 * install composer for autoloading php classes
 
---main project
+--Main Project :
 * clone or download the compressed project file(then extract) 
 * make a .env file in the project's root directory and copy the contents of example.env to newly created .env
 * edit the contents of .env file -> DB_CONNECTION=mongodb
@@ -30,7 +30,7 @@ How To Run:
 				                    DB_DATABASE=myMongoDB
 				                    DB_USERNAME=
                                     DB_PASSWORD=
---commands				    
+--commands  :				    
 * on the projects root directory -> open powershell and input command 
                                       --> composer install (close the window after task is done)
 								      --> npm install  (close the window after task is done)
