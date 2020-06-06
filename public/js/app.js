@@ -2011,6 +2011,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2026,7 +2028,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       error: false,
       errorMsg: '',
       isEmpty: false,
-      updatedAt: ''
+      updatedAt: '',
+      loadingSpinner: true
     };
   },
   mounted: function mounted() {//console.log(window.Laravel.csrfToken)
@@ -2045,6 +2048,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
             case 2:
               res = _context.sent;
+              _this.loadingSpinner = false;
 
               if (res.status == 200) {
                 _this.getData.finalData = res.data[0].finalData;
@@ -2059,7 +2063,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 console.log(res);
               }
 
-            case 4:
+            case 5:
             case "end":
               return _context.stop();
           }
@@ -39157,81 +39161,85 @@ var render = function() {
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "card" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "redis-flex" }, [
-              _c("div", { staticClass: "div1" }, [
-                _c("h3", [_vm._v("JSON DATA")]),
-                _vm._v(" "),
-                !_vm.isEmpty
-                  ? _c("div", { staticClass: "pa" }, [
+        !_vm.loadingSpinner
+          ? _c("div", { staticClass: "card" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("div", { staticClass: "redis-flex" }, [
+                  _c("div", { staticClass: "div1" }, [
+                    _c("h3", [_vm._v("JSON DATA")]),
+                    _vm._v(" "),
+                    !_vm.isEmpty
+                      ? _c("div", { staticClass: "pa" }, [
+                          _vm._v(
+                            "\n                                " +
+                              _vm._s(_vm.getData.finalData) +
+                              "\n                            "
+                          )
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.updatedAt != ""
+                      ? _c("div", { staticClass: "btm-box" }, [
+                          _c("div", [_vm._v(_vm._s(_vm.updatedAt))])
+                        ])
+                      : _vm._e()
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "div1" }, [
+                    _c("h3", [_vm._v("Update DATA")]),
+                    _vm._v(" "),
+                    _c("textarea", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.data.finalData,
+                          expression: "data.finalData"
+                        }
+                      ],
+                      staticClass: "ta",
+                      attrs: { rows: "10", cols: "50", required: "" },
+                      domProps: { value: _vm.data.finalData },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.data, "finalData", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.isEmpty
+                      ? _c("div", [
+                          _c("button", { on: { click: _vm.add } }, [
+                            _vm._v("Add")
+                          ])
+                        ])
+                      : _c("div", [
+                          _c("button", { on: { click: _vm.update } }, [
+                            _vm._v("update")
+                          ])
+                        ]),
+                    _vm._v(" "),
+                    _vm.error
+                      ? _c("div", { staticClass: "mt" }, [
+                          _c("h5", [_vm._v(_vm._s(_vm.errorMsg))])
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt" }, [
                       _vm._v(
-                        "\n                                " +
-                          _vm._s(_vm.getData.finalData) +
-                          "\n                            "
+                        '    \n                                Tips:   {\n                                        "property" : "value"\n                                      }\n                            '
                       )
                     ])
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.updatedAt != ""
-                  ? _c("div", { staticClass: "btm-box" }, [
-                      _c("div", [_vm._v(_vm._s(_vm.updatedAt))])
-                    ])
-                  : _vm._e()
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "div1" }, [
-                _c("h3", [_vm._v("Update DATA")]),
-                _vm._v(" "),
-                _c("textarea", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.data.finalData,
-                      expression: "data.finalData"
-                    }
-                  ],
-                  staticClass: "ta",
-                  attrs: { rows: "10", cols: "50", required: "" },
-                  domProps: { value: _vm.data.finalData },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.data, "finalData", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _vm.isEmpty
-                  ? _c("div", [
-                      _c("button", { on: { click: _vm.add } }, [_vm._v("Add")])
-                    ])
-                  : _c("div", [
-                      _c("button", { on: { click: _vm.update } }, [
-                        _vm._v("update")
-                      ])
-                    ]),
-                _vm._v(" "),
-                _vm.error
-                  ? _c("div", { staticClass: "mt" }, [
-                      _c("h5", [_vm._v(_vm._s(_vm.errorMsg))])
-                    ])
-                  : _vm._e(),
-                _vm._v(" "),
-                _c("div", { staticClass: "mt" }, [
-                  _vm._v(
-                    '    \n                                Tips:   {\n                                        "property" : "value"\n                                      }\n                            '
-                  )
+                  ])
                 ])
               ])
             ])
-          ])
-        ])
+          : _c("div", { staticClass: "lds-ripple" }, [_c("div"), _c("div")])
       ])
     ])
   ])

@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 
-                <div class="card">
+                <div class="card" v-if="!loadingSpinner">
                     <div class="card-header">
                         <h1>Mongo DB</h1>
                     </div>
@@ -41,6 +41,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- loading spinner -->
+                <div class="lds-ripple" v-else><div></div><div></div></div>
             </div>
         </div>
     </div>
@@ -98,6 +100,7 @@ export default {
             errorMsg:'',
             isEmpty:false,
             updatedAt:'',
+            loadingSpinner:true,
         }
     },
     mounted() {
@@ -105,6 +108,7 @@ export default {
     },
     async created(){
         const res = await this.callApi('get','/get');
+        this.loadingSpinner = false;
         if(res.status==200){
             this.getData.finalData = res.data[0].finalData;
             this.data.finalData = res.data[0].finalData;
