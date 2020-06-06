@@ -1,7 +1,8 @@
 ![mongoLaravelVue](https://user-images.githubusercontent.com/29349064/83777849-b97fcb80-a6ab-11ea-96fa-7994d9ef86f0.jpg)
 
-========================================================
-How To Run :
+=======================================================
+
+How To Run:
 
 --NodeJS
 * install NodeJS
