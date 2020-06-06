@@ -25,16 +25,17 @@ How To Run:
 * clone or download the compressed project file(then extract) 
 * make a .env file in the project's root directory and copy the contents of example.env to newly created .env
 * edit the contents of .env file -> DB_CONNECTION=mongodb
-				    DB_HOST=localhost
+				                    DB_HOST=localhost
                                     DB_PORT=27017
-				    DB_DATABASE=myMongoDB
-				    DB_USERNAME=
+				                    DB_DATABASE=myMongoDB
+				                    DB_USERNAME=
                                     DB_PASSWORD=
 --commands				    
-* on the projects root directory -> open powershell and input command --> composer install (close the window after task is done)
-								      --> npm install      (close the window after task is done)
+* on the projects root directory -> open powershell and input command 
+                                      --> composer install (close the window after task is done)
+								      --> npm install  (close the window after task is done)
 								      --> php artisan migrate (check db for successful migration)
-								      --> npm run watch (keep it open) //watcher recompiles your js code after every save so you don't have to build via command every time
+								      --> npm run watch (keep it open)
 								      --> php artisan serve (keep it open)
 * open browser and hit url -> http://127.0.0.1:8000/
 * project should now be running 
