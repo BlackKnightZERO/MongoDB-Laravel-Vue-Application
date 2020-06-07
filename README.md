@@ -24,12 +24,12 @@ How To Run?
 --Main Project :
 * clone or download the compressed project file(then extract) 
 * make a .env file in the project's root directory and copy the contents of example.env to newly created .env
-* edit the contents of .env file -> DB_CONNECTION=mongodb
-				                    DB_HOST=localhost
-                                    DB_PORT=27017
-				                    DB_DATABASE=myMongoDB
-				                    DB_USERNAME=
-                                    DB_PASSWORD=
+* edit the contents of .env file -> <h5>DB_CONNECTION=mongodb<h5>
+				                    <h5>DB_HOST=localhost</h5>
+                                    <h5>DB_PORT=27017</h5>
+				                    <h5>DB_DATABASE=myMongoDB</h5>
+				                    <h5>DB_USERNAME=</h5>
+                                    <h5>DB_PASSWORD=</h5>
 --commands  :				    
 * on the projects root directory -> open powershell and input command 
                                       --> composer install (close the window after task is done)
