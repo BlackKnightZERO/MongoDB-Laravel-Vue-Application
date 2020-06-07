@@ -9,9 +9,9 @@ How To Run?
 
 --Configuring mongoDB with PHP :
 * install mongoDB and mongoDB compass 
-* install php_mongodb driver via -> downloading & the specific .dll file of your php version 
-                                 -> placing the .dll file to xampp/wamp's php/ext directory
-                                 -> then adding driver information in php.ini file
+* install php_mongodb driver via <h5>-> downloading & the specific .dll file of your php version <h5>
+                                 <h5>-> placing the .dll file to xampp/wamp's php/ext directory<h5>
+                                 <h5>-> then adding driver information in php.ini file<h5>
 
 (helper link: https://www.youtube.com/watch?v=oP6_lumWUo8&t=480s )
 
@@ -24,7 +24,7 @@ How To Run?
 --Main Project :
 * clone or download the compressed project file(then extract) 
 * make a .env file in the project's root directory and copy the contents of example.env to newly created .env
-* edit the contents of .env file -> <h5>DB_CONNECTION=mongodb<h5>
+* edit the contents of .env file -> <h5>DB_CONNECTION=mongodb</h5>
 				                    <h5>DB_HOST=localhost</h5>
                                     <h5>DB_PORT=27017</h5>
 				                    <h5>DB_DATABASE=myMongoDB</h5>
@@ -32,11 +32,11 @@ How To Run?
                                     <h5>DB_PASSWORD=</h5>
 --commands  :				    
 * on the projects root directory -> open powershell and input command 
-                                      --> composer install (close the window after task is done)
-								      --> npm install  (close the window after task is done)
-								      --> php artisan migrate (check db for successful migration)
-								      --> npm run watch (keep it open)
-								      --> php artisan serve (keep it open)
+                                      <h5>--> composer install (close the window after task is done)</h5>
+								      <h5>--> npm install  (close the window after task is done)</h5>
+								      <h5>--> php artisan migrate (check db for successful migration)</h5>
+								      <h5>--> npm run watch (keep it open)</h5>
+								      <h5>--> php artisan serve (keep it open)</h5>
 * open browser and hit url -> http://127.0.0.1:8000/
 * project should now be running 
  
