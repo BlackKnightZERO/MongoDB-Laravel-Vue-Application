@@ -37,7 +37,7 @@ How To Run?
 								      <h5>--> php artisan migrate (check db for successful migration)</h5>
 								      <h5>--> npm run watch (keep it open)</h5>
 								      <h5>--> php artisan serve (keep it open)</h5>
-* open browser and hit url -> http://127.0.0.1:8000/
+* open browser and goto url -> http://127.0.0.1:8000/
 * project should now be running 
  
 ========================================================	
